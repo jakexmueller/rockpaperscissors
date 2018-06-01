@@ -14,6 +14,13 @@ namespace rockpaperscissors
         //constructor
 
         //member methods
-
+        public void CrushesScissors()
+        {
+            Console.WriteLine("Rock crushes scissors!");
+        }
+        public void CrushesLizard()
+        {
+            Console.WriteLine("Rock crushes lizard!");
+        }
     }
 }

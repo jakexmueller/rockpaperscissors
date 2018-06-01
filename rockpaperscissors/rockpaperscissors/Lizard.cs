@@ -14,6 +14,13 @@ namespace rockpaperscissors
         //constructor
 
         //member methods
-
+        public void PoisonsSpock()
+        {
+            Console.WriteLine("Lizard poisons spock!");
+        }
+        public void EatsPaper()
+        {
+            Console.WriteLine("Lizard eats paper!");
+        }
     }
 }

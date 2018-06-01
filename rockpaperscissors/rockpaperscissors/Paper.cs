@@ -14,6 +14,14 @@ namespace rockpaperscissors
         //constructor
 
         //member methods
+        public void CoversRock()
+        {
+            Console.WriteLine("Paper covers rock!");
+        }
+        public void DisprovesSpock()
+        {
+            Console.WriteLine("Paper disproves Spock!");
 
+        }
     }
 }
