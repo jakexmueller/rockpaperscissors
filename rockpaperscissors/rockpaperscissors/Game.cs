@@ -10,6 +10,8 @@ namespace rockpaperscissors
     {
 
         //member variables
+        Player1 player1;
+        Player2 player2;
         public List<string> gestureOptions = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
         
 
@@ -17,14 +19,23 @@ namespace rockpaperscissors
         //constructor
 
         //member methods
-        public void PrintOptions()
+        public void StartGame()
         {
-            foreach(string gesture in gestureOptions)
+            // create player 1
+            player1 = new Player1();
+
+            // create player 2
+            player2 = new Player2();
+
+            Console.WriteLine("Type one of the following options to choose!");
+
+            foreach (string gesture in gestureOptions)
             {
+                
                 Console.WriteLine(gesture);
            
             }
-            Console.ReadLine();
+            string player1Choice = player1.PickGesture(gestureOptions);           
         }
 
 
