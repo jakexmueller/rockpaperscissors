@@ -10,8 +10,8 @@ namespace rockpaperscissors
     {
 
         //member variables
-        Player1 player1;
-        Player2 player2;
+        Player player;
+        
         public List<string> gestureOptions = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
         
 
@@ -22,10 +22,10 @@ namespace rockpaperscissors
         public void StartGame()
         {
             // create player 1
-            player1 = new Player1();
+            player = new Player();
 
             // create player 2
-            player2 = new Player2();
+           
 
             Console.WriteLine("Type one of the following options to choose!");
 
@@ -35,7 +35,8 @@ namespace rockpaperscissors
                 Console.WriteLine(gesture);
            
             }
-            string player1Choice = player1.PickGesture(gestureOptions);           
+            string playerChoice = player.PickGesture(gestureOptions);
+           // string player2Choice = player.PickGesture(gestureOptions);
         }
 
 

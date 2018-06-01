@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace rockpaperscissors
 {
-    class Player1
+    class Player
     {
 
         //member variables
@@ -20,7 +20,7 @@ namespace rockpaperscissors
         //    string userInput = Console.ReadLine();
         //}
 
-        public string PickGesture(List<string> gestureOptions)
+        public virtual string PickGesture(List<string> gestureOptions)
         {
             Console.WriteLine("Pick a gesture");
             return Console.ReadLine();

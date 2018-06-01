@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace rockpaperscissors
 {
-    class Computer
+    class Computer : Player
     {
 
         //member variables
@@ -14,6 +14,15 @@ namespace rockpaperscissors
         //constructor
 
         //member methods
+        public override string PickGesture(List<string> gestureOptions)
+        {
 
+
+            Random picker = new Random();
+            int index = picker.Next(0, gestureOptions.Count);
+            Console.WriteLine("Today's city of the day: {0}",
+                              gestureOptions[index]);
+            return Console.ReadLine();
+        }
     }
 }
