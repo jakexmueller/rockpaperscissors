@@ -8,5 +8,12 @@ namespace rockpaperscissors
 {
     class Computer
     {
+
+        //member variables
+
+        //constructor
+
+        //member methods
+
     }
 }

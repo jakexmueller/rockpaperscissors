@@ -8,5 +8,12 @@ namespace rockpaperscissors
 {
     class player
     {
+
+        //member variables
+
+        //constructor
+
+        //member methods
+
     }
 }

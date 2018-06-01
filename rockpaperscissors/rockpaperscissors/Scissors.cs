@@ -8,5 +8,12 @@ namespace rockpaperscissors
 {
     class Scissors
     {
+
+        //member variables
+
+        //constructor
+
+        //member methods
+
     }
 }

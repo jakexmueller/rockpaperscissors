@@ -8,5 +8,12 @@ namespace rockpaperscissors
 {
     class Game
     {
+
+        //member variables
+
+        //constructor
+
+        //member methods
+
     }
 }

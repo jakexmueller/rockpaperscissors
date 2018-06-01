@@ -8,5 +8,12 @@ namespace rockpaperscissors
 {
     class Lizard
     {
+
+        //member variables
+
+        //constructor
+
+        //member methods
+
     }
 }

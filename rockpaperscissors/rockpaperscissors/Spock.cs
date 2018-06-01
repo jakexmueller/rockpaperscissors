@@ -8,5 +8,12 @@ namespace rockpaperscissors
 {
     class Spock
     {
+
+        //member variables
+
+        //constructor
+
+        //member methods
+
     }
 }
