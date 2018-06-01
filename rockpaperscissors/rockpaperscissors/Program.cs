@@ -12,7 +12,8 @@ namespace rockpaperscissors
         {
             Game myGame = new Game();
 
-            myGame.StartGame();
+            myGame.PickPlayers();
+            myGame.Battle();
         }
     }
 }

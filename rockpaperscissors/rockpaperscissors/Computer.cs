@@ -20,7 +20,7 @@ namespace rockpaperscissors
 
             Random picker = new Random();
             int index = picker.Next(0, gestureOptions.Count);
-            Console.WriteLine("Today's city of the day: {0}",
+            Console.WriteLine("The computer played... {0}",
                               gestureOptions[index]);
             return Console.ReadLine();
         }
