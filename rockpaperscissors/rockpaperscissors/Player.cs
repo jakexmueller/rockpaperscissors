@@ -9,21 +9,28 @@ namespace rockpaperscissors
     class Player
     {
 
-        //member variables
-        public List<string> gesturePicks = new List<string>();
-
+        //member vriables
+        Human human1;
+        Human human2;
+        Computer computer;
         //constructor
 
         //member methods
-        //public void PickGesture()
-        //{
-        //    string userInput = Console.ReadLine();
-        //}
+
+        
+            // create player 1
+      
+
+            // create player 2
+
 
         public virtual string PickGesture(List<string> gestureOptions)
         {
             Console.WriteLine("Pick a gesture");
             return Console.ReadLine();
+
         }
     }
+    
+
 }

@@ -12,7 +12,7 @@ namespace rockpaperscissors
         //member variables
         Player player1;
         Player player2;
-        Computer computer;
+        //Computer computer;
         
         public List<string> gestureOptions = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
 
@@ -21,28 +21,24 @@ namespace rockpaperscissors
         //constructor
 
         //member methods
-        public void PickPlayers()
+
+        public void GetPlayers()
         {
-
-            // create player 1
-            player1 = new Player();
-
-            // create player 2
-
-
-            Console.WriteLine("Are you playing against the computer or another person? Type your answer below");
+            //how many players?
+            Console.WriteLine("How many players are in this game? Type '1' or '2'");
             string userInput = Console.ReadLine();
-
-            if (userInput == "person")
-            {
-                player2 = new Player();
+            //if one player, then instantiate Human and Computer
+            if (userInput == "1"){
+                player1 = new Human();
+                player2 = new Computer();
             }
-            else if (userInput == "computer")
-            {
-                computer = new Computer();
+            //if two players, then instantiate Human and Human
+            else if (userInput == "2"){
+                player1 = new Human();
+                player2 = new Human();
             }
-        }   
 
+        }
         public void Battle()
         {
         
@@ -55,7 +51,7 @@ namespace rockpaperscissors
            
             }
             string player1Choice = player1.PickGesture(gestureOptions);
-            string player2Choice = computer.PickGesture(gestureOptions);
+            string player2Choice = player2.PickGesture(gestureOptions);
             // string player2Choice = player.PickGesture(gestureOptions);
         }
 
