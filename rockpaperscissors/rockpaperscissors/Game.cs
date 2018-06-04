@@ -60,11 +60,11 @@ namespace rockpaperscissors
 
 
             int winnerFunction = (5 + player1Choice - player2Choice)%5;
-                if(winnerFunction == 1 || winnerFunction == 3)
+                if(winnerFunction == 2 || winnerFunction == 3)
                 {
                     Console.WriteLine("Player 1 wins");
                 }
-                else if(winnerFunction == 2 || winnerFunction == 4)
+                else if(winnerFunction == 1 || winnerFunction == 4)
                 {
                     Console.WriteLine("Player 2 wins");
                 }
