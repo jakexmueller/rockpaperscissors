@@ -14,6 +14,7 @@ namespace rockpaperscissors
 
             myGame.GetPlayers();
          
+
             myGame.Battle();
             Console.ReadLine();
         }

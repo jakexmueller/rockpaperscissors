@@ -12,11 +12,14 @@ namespace rockpaperscissors
         //member variables
         Player player1;
         Player player2;
+        public int player1Score=0;
+        public int player2Score=0;
+
         //Computer computer;
         
         public List<string> gestureOptions = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
         public List<int> gestureOptionNumbers = new List<int>() { };
-        private readonly int count;
+
 
 
 
@@ -58,19 +61,42 @@ namespace rockpaperscissors
             int player1Choice = player1.PickGesture(gestureOptions);
             int player2Choice = player2.PickGesture(gestureOptions);
 
+           //int player1Score = 0;
+            //int player2Score = 0;
+
 
             int winnerFunction = (5 + player1Choice - player2Choice)%5;
                 if(winnerFunction == 2 || winnerFunction == 3)
                 {
-                    Console.WriteLine("Player 1 wins");
+                    Console.WriteLine("PLAYER 1 WINS!");
+                    Console.WriteLine("Player 1 Score:" + ++player1Score );
+                    Console.WriteLine("Player 2 Score:" + player2Score);
                 }
                 else if(winnerFunction == 1 || winnerFunction == 4)
                 {
-                    Console.WriteLine("Player 2 wins");
+                    Console.WriteLine("PLAYER 2 WINS!");
+                Console.WriteLine("Player 1 Score:" + player1Score);
+                Console.WriteLine("Player 2 Score:" + ++player2Score);
                 }
                 else if (winnerFunction == 0)
                 {
-                    Console.WriteLine("It's a tie!");
+                    Console.WriteLine("IT'S A TIE!");
+                    Console.WriteLine("Player 1 Score:" + player1Score);
+                    Console.WriteLine("Player 2 Score:" + player2Score);
+                }
+
+                if (player1Score <4 && player2Score <4)
+                {
+                    Console.WriteLine("NEXT ROUND!");
+                    Battle();
+                }
+                else if (player1Score >= 4)
+                {
+                    Console.WriteLine("PLAYER 1 IS SUPERIOR!!!!");
+                }
+                else if (player2Score >= 4)
+                {
+                Console.WriteLine("PLAYER 2 IS SUPERIOR!!!!");
                 }
 
         }

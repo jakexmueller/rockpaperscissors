@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 
 namespace rockpaperscissors
 {
-    class Player
+    public class Player
     {
 
         //member vriables
+        //int player1Score = 0;
+        //int player2Score = 0;
         //Human human1;
-       // Human human2;
-       // Computer computer;
+        // Human human2;
+        // Computer computer;
         //constructor
 
         //member methods
 
-        
-            // create player 1
-      
 
-            // create player 2
+        // create player 1
+
+
+        // create player 2
 
 
         public virtual int PickGesture(List<string> gestureOptions)
