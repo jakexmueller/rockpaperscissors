@@ -15,6 +15,9 @@ namespace rockpaperscissors
         //Computer computer;
         
         public List<string> gestureOptions = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
+        public List<int> gestureOptionNumbers = new List<int>() { };
+        private readonly int count;
+
 
 
 
@@ -39,6 +42,8 @@ namespace rockpaperscissors
             }
 
         }
+
+
         public void Battle()
         {
         
@@ -50,9 +55,24 @@ namespace rockpaperscissors
                 Console.WriteLine(gesture);
            
             }
-            string player1Choice = player1.PickGesture(gestureOptions);
-            string player2Choice = player2.PickGesture(gestureOptions);
-            // string player2Choice = player.PickGesture(gestureOptions);
+            int player1Choice = player1.PickGesture(gestureOptions);
+            int player2Choice = player2.PickGesture(gestureOptions);
+
+
+            int winnerFunction = (5 + player1Choice - player2Choice)%5;
+                if(winnerFunction == 1 || winnerFunction == 3)
+                {
+                    Console.WriteLine("Player 1 wins");
+                }
+                else if(winnerFunction == 2 || winnerFunction == 4)
+                {
+                    Console.WriteLine("Player 2 wins");
+                }
+                else if (winnerFunction == 0)
+                {
+                    Console.WriteLine("It's a tie!");
+                }
+
         }
 
 

@@ -14,7 +14,7 @@ namespace rockpaperscissors
         //constructor
 
         //member methods
-        public override string PickGesture(List<string> gestureOptions)
+        public override int PickGesture(List<string> gestureOptions)
         {
 
 
@@ -22,7 +22,8 @@ namespace rockpaperscissors
             int index = picker.Next(0, gestureOptions.Count);
             Console.WriteLine("The computer played... {0}",
                               gestureOptions[index]);
-            return Console.ReadLine();
+            
+            return index;
         }
     }
 }

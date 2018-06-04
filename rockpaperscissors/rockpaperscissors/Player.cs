@@ -10,9 +10,9 @@ namespace rockpaperscissors
     {
 
         //member vriables
-        Human human1;
-        Human human2;
-        Computer computer;
+        //Human human1;
+       // Human human2;
+       // Computer computer;
         //constructor
 
         //member methods
@@ -24,10 +24,12 @@ namespace rockpaperscissors
             // create player 2
 
 
-        public virtual string PickGesture(List<string> gestureOptions)
+        public virtual int PickGesture(List<string> gestureOptions)
         {
             Console.WriteLine("Pick a gesture");
-            return Console.ReadLine();
+            string userInput = Console.ReadLine();
+            return gestureOptions.IndexOf(userInput);
+
 
         }
     }
