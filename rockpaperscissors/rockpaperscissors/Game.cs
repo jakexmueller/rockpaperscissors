@@ -14,7 +14,7 @@ namespace rockpaperscissors
         Player player2;    
 
         //Computer computer; 
-        public List<string> gestureOptions = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
+        public List<string> gestureOptions = new List<string>() { "rock", "paper", "scissors", "spock", "lizard", };
         public List<int> gestureOptionNumbers = new List<int>() { };
 
         //constructor
@@ -63,25 +63,28 @@ namespace rockpaperscissors
             {               
                 Console.WriteLine(gesture);           
             }
+
             int player1Choice = player1.PickGesture(gestureOptions);
-            
-            while (player1Choice == -1)
+            int player2Choice = player2.PickGesture(gestureOptions);
+
+            while (player1Choice == -1 || player2Choice == -1)
             {
                 Console.WriteLine("Only use lowercase, and make sure your spelling is correct! Try Again.");
                 player1Choice = player1.PickGesture(gestureOptions);
+                player2Choice = player2.PickGesture(gestureOptions);
                 // return;
             }
 
-            int player2Choice = player2.PickGesture(gestureOptions);
+            
 
             int winnerFunction = (5 + player1Choice - player2Choice)%5;
-                if(winnerFunction == 2 || winnerFunction == 3)
+                if(winnerFunction == 1 || winnerFunction == 3)
                 {
                     Console.WriteLine("PLAYER 1 WINS!");
                     Console.WriteLine("Player 1 Score:" + ++player1.score );
                     Console.WriteLine("Player 2 Score:" + player2.score);                
                 }
-                else if(winnerFunction == 1 || winnerFunction == 4)
+                else if(winnerFunction == 2 || winnerFunction == 4)
                 {
                     Console.WriteLine("PLAYER 2 WINS!");
                     Console.WriteLine("Player 1 Score:" + player1.score);
