@@ -11,8 +11,7 @@ namespace rockpaperscissors
 
         //member variables
         Player player1;
-        Player player2;
-       
+        Player player2;    
 
         //Computer computer; 
         public List<string> gestureOptions = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
@@ -25,6 +24,17 @@ namespace rockpaperscissors
         public void GetPlayers()
         {
             //how many players?
+            Console.WriteLine("The game is simple. It's Rock Paper Scissors; however we add Lizard and Spock.");
+            Console.WriteLine("Rock crushes Scissors");
+            Console.WriteLine("Scissors cuts paper");
+            Console.WriteLine("Paper covers Rock");
+            Console.WriteLine("Rock crushes Lizard");
+            Console.WriteLine("Lizard poisons Spock");
+            Console.WriteLine("Spock smashes Scissors");
+            Console.WriteLine("Scissors decapitates Lizard");
+            Console.WriteLine("Lizard eats Paper");
+            Console.WriteLine("Paper disproves Spock");
+            Console.WriteLine("Spock vaporizes Rock");
             Console.WriteLine("How many players are in this game? Type '1' or '2'");
             string userInput = Console.ReadLine();
             //if one player, then instantiate Human and Computer
