@@ -25,6 +25,7 @@ namespace rockpaperscissors
 
 
         //constructor
+        Game game = new Game();
 
         //member methods
 
@@ -43,13 +44,19 @@ namespace rockpaperscissors
                 player1 = new Human();
                 player2 = new Human();
             }
+            else
+            {
+                Console.WriteLine("That was not a '1,' nor was it a '2.' Try again and do better.");
+                GetPlayers();
+            }
 
         }
 
 
         public void Battle()
         {
-        
+
+            
             Console.WriteLine("Type one of the following options to choose!");
 
             foreach (string gesture in gestureOptions)
@@ -71,24 +78,30 @@ namespace rockpaperscissors
                     Console.WriteLine("PLAYER 1 WINS!");
                     Console.WriteLine("Player 1 Score:" + ++player1Score );
                     Console.WriteLine("Player 2 Score:" + player2Score);
+                
                 }
                 else if(winnerFunction == 1 || winnerFunction == 4)
                 {
                     Console.WriteLine("PLAYER 2 WINS!");
-                Console.WriteLine("Player 1 Score:" + player1Score);
-                Console.WriteLine("Player 2 Score:" + ++player2Score);
+                    Console.WriteLine("Player 1 Score:" + player1Score);
+                    Console.WriteLine("Player 2 Score:" + ++player2Score);
+                
                 }
                 else if (winnerFunction == 0)
                 {
                     Console.WriteLine("IT'S A TIE!");
                     Console.WriteLine("Player 1 Score:" + player1Score);
                     Console.WriteLine("Player 2 Score:" + player2Score);
+                
                 }
 
+                
                 if (player1Score <4 && player2Score <4)
                 {
+                    
                     Console.WriteLine("NEXT ROUND!");
                     Battle();
+
                 }
                 else if (player1Score >= 4)
                 {
@@ -98,7 +111,7 @@ namespace rockpaperscissors
                 {
                 Console.WriteLine("PLAYER 2 IS SUPERIOR!!!!");
                 }
-
+            
         }
 
 

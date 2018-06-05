@@ -10,20 +10,10 @@ namespace rockpaperscissors
     {
 
         //member vriables
-        //int player1Score = 0;
-        //int player2Score = 0;
-        //Human human1;
-        // Human human2;
-        // Computer computer;
+
         //constructor
-
+        Player player = new Player();
         //member methods
-
-
-        // create player 1
-
-
-        // create player 2
 
 
         public virtual int PickGesture(List<string> gestureOptions)

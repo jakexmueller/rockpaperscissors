@@ -12,6 +12,7 @@ namespace rockpaperscissors
         //member variables
 
         //constructor
+        Computer computer = new Computer();
 
         //member methods
         public override int PickGesture(List<string> gestureOptions)
