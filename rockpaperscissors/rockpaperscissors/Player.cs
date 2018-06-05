@@ -10,9 +10,11 @@ namespace rockpaperscissors
     {
 
         //member vriables
+        public int score;
+        public int gesture;
 
         //constructor
-        
+
         //member methods
 
 
@@ -20,12 +22,9 @@ namespace rockpaperscissors
         {
             Console.WriteLine("Pick a gesture");
             string userInput = Console.ReadLine();
-            if (gestureOptions.IndexOf(userInput) == -1)
-            {
-                Console.WriteLine("Only use lowercase, and make sure your spelling is correct! Exit the program and re run everything.");
-            }
             
-                return gestureOptions.IndexOf(userInput);
+            
+            return gestureOptions.IndexOf(userInput);
             
             
 

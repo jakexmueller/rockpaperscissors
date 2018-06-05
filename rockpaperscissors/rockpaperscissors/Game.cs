@@ -55,6 +55,14 @@ namespace rockpaperscissors
                 Console.WriteLine(gesture);           
             }
             int player1Choice = player1.PickGesture(gestureOptions);
+            
+            while (player1Choice == -1)
+            {
+                Console.WriteLine("Only use lowercase, and make sure your spelling is correct! Try Again.");
+                player1Choice = player1.PickGesture(gestureOptions);
+                // return;
+            }
+
             int player2Choice = player2.PickGesture(gestureOptions);
 
             int winnerFunction = (5 + player1Choice - player2Choice)%5;
