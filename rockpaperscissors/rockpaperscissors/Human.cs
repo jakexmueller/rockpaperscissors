@@ -15,7 +15,7 @@ namespace rockpaperscissors
 
         //constructor
 
-        Human human = new Human();
+       
         
         //member methods
    

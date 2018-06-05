@@ -12,7 +12,7 @@ namespace rockpaperscissors
         //member vriables
 
         //constructor
-        Player player = new Player();
+        
         //member methods
 
 
